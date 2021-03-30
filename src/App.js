@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import MainPage from './components/MainPage';
 
 function App() {
+  
+  // const handleMainPage = (value) => {
+  //   const filteredEmojies = filterEmojies(value)
+  //   return filteredEmojies
+  // }
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <React.Fragment>
+      <header className="Header">
+        <img src="//cdn.jsdelivr.net/emojione/assets/png/1f638.png" alt="cat"/>
+        <div>Emoji Search</div>
+        <img src="//cdn.jsdelivr.net/emojione/assets/png/1f63a.png" alt="cat"/>
       </header>
-    </div>
+      <div className="Layout">
+        <MainPage />
+      </div>
+    </React.Fragment>
   );
 }
 

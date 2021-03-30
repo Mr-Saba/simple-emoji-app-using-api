@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.Header div {
+ margin: 20px;
+ font-size: 40px;
+ font-weight: 500;
+}
+.Header img{
+  width: 40px;
+  height: 40px;
+}
+.Layout {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Input {
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  border: 1px solid grey;
+}
+.Input:focus {
+  outline: none;
+}
+.ListItem {
+  width: 100%;
+  height: 50px;
+  border: 1px solid grey;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  color: rgb(61, 61, 61);
+  cursor: pointer;
+  padding-left: 15px;
+  content: attr("hello");
+  position: relative;
+}
+.ListItem:hover {
+  background-color: rgb(219, 219, 219);
+}
+#Copy {
+  position: absolute;
+  right: 10px;
+  visibility: hidden;
+}
+.ListItem:hover #Copy{
+  visibility: visible;
+  color: grey;
 }
 
-.App-link {
-  color: #61dafb;
+.ListItem:active #Copy {
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
